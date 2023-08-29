@@ -34,27 +34,25 @@ This unified model enables multiple tasks without relying on multiple separate m
 - tqdm for progress bars
 - argparse for command-line arguments
 
-A temporary extra requirement for fairseq2 is [libsndfile](https://github.com/libsndfile/libsndfile). From [Conda](https://docs.conda.io/en/latest/) environment it can be installed via:
-\`\`\`bash
-conda install -y -c conda-forge libsndfile
-\`\`\`
-
+# Quick Start
 ## Installation
 
-Clone this repository and navigate to its folder in your terminal.
+```
+pip install .
+```
 
-\`\`\`bash
-git clone https://github.com/your_username/seamlessm4t_piece_by_piece_translation.git
-cd seamlessm4t_piece_by_piece_translation
-\`\`\`
+A temporary extra requirement for fairseq2 is [libsndfile](https://github.com/libsndfile/libsndfile). From [Conda](https://docs.conda.io/en/latest/) environment it can be installed via:
+```
+conda install -y -c conda-forge libsndfile
+```
 
 ## Usage
 
 ### Basic Command Structure
 
-\`\`\`bash
+```bash
 python seamlessm4t_piece_by_piece_translation.py <input_file> <output_file> [options]
-\`\`\`
+```
 
 ### Arguments and Options
 
@@ -70,9 +68,9 @@ python seamlessm4t_piece_by_piece_translation.py <input_file> <output_file> [opt
 
 To translate text from an input file `Puffin_filtered_with_text.jsonl` to an output file `output_780_next.jsonl` using the SeamlessM4T_large model, translating from English to Hindi, and starting from the 780th row:
 
-\`\`\`bash
+```bash
 python seamlessm4t_piece_by_piece_translation.py Puffin_filtered_with_text.jsonl output_780_next.jsonl --model_name seamlessM4T_large --src_lang eng --target_lang hin --start_row 780
-\`\`\`
+```
 
 ## Logging
 
@@ -81,5 +79,5 @@ python seamlessm4t_piece_by_piece_translation.py Puffin_filtered_with_text.jsonl
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE.md` file for details.
+This project is licensed under the CC-BY-NC License. See the `LICENSE.md` file for details.
 
